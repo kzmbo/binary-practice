@@ -1,0 +1,222 @@
+//general style
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+h1{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+}
+//end general style
+
+
+//convert from-section
+#from-section{
+    height: 50vh;
+    width: auto;
+    background: #364F6B;
+    .drop-down-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2rem;
+        select{
+            width: 10%;
+            border-radius: 20px;
+            outline: none;
+            font-size: 18px;
+            padding: 4px 10px;
+            background: #BEBEBE;
+        }
+        #min-range,
+        #max-range{
+            margin-left: 6px;
+            width: 3%;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border-style: none;
+            border-bottom: 1px solid #BEBEBE;
+            color: #BEBEBE;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;;
+            outline: none;
+        }
+        #go-btn{
+            margin: 3px 20px;
+            font-size: 15px;
+            border-radius: 20px;
+            padding: 6px 35px;
+            background-color:#4be77f;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid #4be77f;
+                background: rgba($color: #000000, $alpha: 0);
+                color: #BEBEBE;
+                transition: ease-in-out 100ms;
+                cursor: pointer;
+            }
+        }
+    }
+}
+//end from-section
+
+//display answer
+#display-wrong{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #ff3a3a;
+    font-size: 30px;
+}
+
+#display-right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    color: #24d33c;
+    font-size: 30px;
+}
+//end display answer
+
+
+//convert-from
+#convert-from{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 101px;
+    color: #BEBEBE;    
+}
+//end convert-form
+
+//convert-to section
+#to-section{
+    width: 100%;
+    height: 50vh;
+    background: #24364A;
+}
+//end convert-to section
+
+//convert-to
+.convert-to{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    #ans-box1,
+    #ans-box2{
+        text-align: center;
+        background-color: rgba($color: #000000, $alpha: 0.0);
+        width: 80%;
+        height: 10%;
+        border-style: none;
+        border-bottom: 1px solid #BEBEBE;
+        font-size: 38px;
+        padding: 33px 15px;
+        outline: none;
+        color: #BEBEBE;
+    }
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    #enter-btn{
+        background: #28FE61;
+        border-style: none;
+        padding: 5px 40px;
+        border-radius: 20px;
+        outline: none;
+        &:hover{
+            border: 1px solid #4be77f;
+            background: rgba($color: #000000, $alpha: 0);
+            color: #BEBEBE;
+            transition: ease-in-out 100ms;
+            cursor: pointer;
+        }
+    }
+}
+//end convert-to section
+
+
+@media (max-width: 1150px){
+    //convert from-section
+    #from-section{
+        .drop-down-menu1{
+            select{
+                font-size: 12px;
+                padding: 4px 10px;
+            }
+            #go-btn{
+                margin: 3px 20px;
+                font-size: 10px;
+            }
+        }
+    }
+    //end from-section
+
+    //convert-to section
+    .convert-to{
+        width: 100%;
+        height: 40%;
+        #ans-box1,
+        #ans-box2{
+            text-align: center;
+            font-size: 28px;
+        }
+    }
+    //end convert-to section
+}
+
+
+@media (max-width: 815px){
+    //convert from-section
+    #from-section{
+        .drop-down-menu1{
+            select{
+                font-size: 9px;
+            }
+            #go-btn{
+                margin: 3px 20px;
+                font-size: 7px;
+            }
+        }
+    }
+    //end from-section
+
+     //convert-to section
+     .convert-to{
+        #ans-box1,
+        #ans-box2{
+            font-size: 20px;
+        }
+    }
+    //end convert-to section
+}
+
+@media (max-width: 500px){
+    
+    //convert-to section
+    .convert-to{
+        #ans-box1,
+        #ans-box2{
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    }
+    //end convert-to section
+}
+

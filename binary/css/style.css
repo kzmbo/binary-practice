@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#from-section {
+  height: 50vh;
+  width: auto;
+  background: #364F6B;
+}
+
+#from-section .drop-down-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+#from-section .drop-down-menu select {
+  width: 10%;
+  border-radius: 20px;
+  outline: none;
+  font-size: 18px;
+  padding: 4px 10px;
+  background: #BEBEBE;
+}
+
+#from-section .drop-down-menu #min-range,
+#from-section .drop-down-menu #max-range {
+  margin-left: 6px;
+  width: 3%;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  border-bottom: 1px solid #BEBEBE;
+  color: #BEBEBE;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  outline: none;
+}
+
+#from-section .drop-down-menu #go-btn {
+  margin: 3px 20px;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 6px 35px;
+  background-color: #4be77f;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#from-section .drop-down-menu #go-btn:hover {
+  border: 1px solid #4be77f;
+  background: rgba(0, 0, 0, 0);
+  color: #BEBEBE;
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms;
+  cursor: pointer;
+}
+
+#display-wrong {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #ff3a3a;
+  font-size: 30px;
+}
+
+#display-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #24d33c;
+  font-size: 30px;
+}
+
+#convert-from {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 101px;
+  color: #BEBEBE;
+}
+
+#to-section {
+  width: 100%;
+  height: 50vh;
+  background: #24364A;
+}
+
+.convert-to {
+  width: 100%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.convert-to #ans-box1,
+.convert-to #ans-box2 {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0);
+  width: 80%;
+  height: 10%;
+  border-style: none;
+  border-bottom: 1px solid #BEBEBE;
+  font-size: 38px;
+  padding: 33px 15px;
+  outline: none;
+  color: #BEBEBE;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.btn #enter-btn {
+  background: #28FE61;
+  border-style: none;
+  padding: 5px 40px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.btn #enter-btn:hover {
+  border: 1px solid #4be77f;
+  background: rgba(0, 0, 0, 0);
+  color: #BEBEBE;
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms;
+  cursor: pointer;
+}
+
+@media (max-width: 1150px) {
+  #from-section .drop-down-menu1 select {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+  #from-section .drop-down-menu1 #go-btn {
+    margin: 3px 20px;
+    font-size: 10px;
+  }
+  .convert-to {
+    width: 100%;
+    height: 40%;
+  }
+  .convert-to #ans-box1,
+  .convert-to #ans-box2 {
+    text-align: center;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 815px) {
+  #from-section .drop-down-menu1 select {
+    font-size: 9px;
+  }
+  #from-section .drop-down-menu1 #go-btn {
+    margin: 3px 20px;
+    font-size: 7px;
+  }
+  .convert-to #ans-box1,
+  .convert-to #ans-box2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .convert-to #ans-box1,
+  .convert-to #ans-box2 {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

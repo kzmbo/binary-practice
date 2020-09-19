@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kembo's Binary Practice</title>
+        <link rel="icon" href="img/text_binary.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section id="from-section">
+            <div class="drop-down-menu">
+                <select id="selectFromConvert">
+                    <option value="decimal">Decimal</option>
+                    <option value="binary">Binary</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                </select>
+                <input type="text" name="min" id="min-range" placeholder="min" value="1">
+                <input type="text" name="mzx" id="max-range" placeholder="max" value="100">
+                <button id="go-btn">Go!</button>
+            </div>
+            <div id="convert-from">
+                <h1>11</h1>
+            </div>
+        </section>
+        <section id="display">
+        </section>
+        <section id="to-section">
+            <div class="convert-to">
+                <input type="text" id="ans-box1" placeholder="Type your answer in binary">
+            </div>
+            <div class="convert-to">
+                <input type="text" id="ans-box2" placeholder="Type your answer in binary">
+            </div>
+            <div class="btn">
+                <button id="enter-btn">Enter</button>
+            </div>
+        </section>
+        <script src="js/app.js"></script>
+    </body>
+</html>
