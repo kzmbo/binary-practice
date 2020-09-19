@@ -165,7 +165,7 @@ function generateRandomNumber(option, min, max){
     if(option === "binary"){
         convertFrom.innerHTML = `<h1>${sixteenBitBinary}</h1>`
         ansBox1.placeholder = "Type you answer in decimal";
-        ansBox2.placeholder = "Type you answer in hexadecimal (Uppercase Letters)";
+        ansBox2.placeholder = "Type you answer in hexadecimal (Uppercase Letters & No Extra Zeros)";
         return sixteenBitBinary;
     }else if (option === "decimal"){
         ansBox1.placeholder = "Type you answer in binary (16-bit)";
