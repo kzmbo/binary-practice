@@ -169,7 +169,7 @@ function generateRandomNumber(option, min, max){
         return sixteenBitBinary;
     }else if (option === "decimal"){
         ansBox1.placeholder = "Type you answer in binary (16-bit)";
-        ansBox2.placeholder = "Type you answer in hexadecimal (Uppercase Letters)";
+        ansBox2.placeholder = "Type you answer in hexadecimal (Uppercase Letters & No Extra Zeros)";
         convertFrom.innerHTML = `<h1>${decimalNum}</h1>`
         return decimalNum;
     }else if (option === "hexadecimal"){
