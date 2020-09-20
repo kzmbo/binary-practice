@@ -181,6 +181,20 @@ function generateRandomNumber(option, min, max){
     
 }
 
+function convertTwosCompBinary(test) {
+    const arr = test.split("").reverse(); // Convert string to array and reverse it. So it's ['1', '0', '1', '1'] now.
+    
+    let total = 0;
+    const MSB = arr.length - 1;
+    total += -1 * (2 * arr[MSB]) ** MSB; // -1 * (2 * 1)^3
+    
+    for (let i = 0; i < arr.length - 1; ++i) {
+        total += ((arr[i] * 2) ** i) // Add other bits
+    }
+   
+    return total.toString();
+}
+
 
 function main(){
     runEvent();
