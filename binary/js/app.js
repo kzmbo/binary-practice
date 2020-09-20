@@ -182,18 +182,46 @@ function generateRandomNumber(option, min, max){
 }
 
 function convertTwosCompBinary(test) {
-    const arr = test.split("").reverse(); // Convert string to array and reverse it. So it's ['1', '0', '1', '1'] now.
+    const arr = test.split("").reverse(); // Convert string to array and reverse it.
     
     let total = 0;
     const MSB = arr.length - 1;
-    total += -1 * (2 * arr[MSB]) ** MSB; // -1 * (2 * 1)^3
+    total += -1 * (2 * arr[MSB]) ** MSB;
     
     for (let i = 0; i < arr.length - 1; ++i) {
-        total += ((arr[i] * 2) ** i) // Add other bits
+        total += ((arr[i] * 2) ** i); // Add other bits
     }
    
     return total.toString();
 }
+
+function unsignedToTwosComp(test) {
+    const arr = test.split(''); // Turn string into array
+    
+    // Create a new array that stores the flipped bits
+    const newArr = arr.map((element) => {
+      if (element === '1') return '0';
+      if (element === '0') return '1';
+    });
+    
+    // Adding two parseInt(binary, 2) conveniently does the binary addition 
+    // algorithm for us
+    const binaryAdd = parseInt(newArr.join(''), 2) + parseInt('1', 2);
+    let twosComp = binaryAdd.toString(2);
+    
+    if (twosComp.length < test.length) {
+        // If leading zeros are omitted, add them back
+        return twosComp.padStart(test.length, '0'); 
+    }
+    else if (twosComp.length > test.length) {
+        // Remove carry-out from leftmost column
+       twosComp = twosComp.split('');
+       let temp = twosComp.shift(); // Remove first element
+       return twosComp.join(''); // Return concatenated string array
+    }
+    
+    return twosComp;
+  }
 
 
 function main(){
